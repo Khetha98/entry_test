@@ -18,6 +18,9 @@ contract SecureLottery {
     // - How will you track entries?
     // - How will you store player information?
     // - What data structure for managing the pot?
+    uint[] entries;
+    mapping(address => string) public playerInfo;
+    string[] potManaging;
     
     constructor() {
         owner = msg.sender;
@@ -36,6 +39,7 @@ contract SecureLottery {
         // Your implementation here
         // Validation: Check minimum entry amount
         // Validation: Check if lottery is active
+        
     }
     
     // TODO: Implement winner selection function
