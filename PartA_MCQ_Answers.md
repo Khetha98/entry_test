@@ -29,12 +29,12 @@
 - **C)** Use ERC-721 exclusively, store all data off-chain for gas savings, and require buyers to use MetaMask with manual price negotiations.  
 - **D)** Build everything as separate NFT collections with no DEX integration since farmers won't understand DeFi protocols.  
 
-**Your Answer:** [A/B/C/D]  
+**Your Answer:** B
 
 **Your Reasoning:**  
 [2–3 sentences explaining why you chose this answer. What makes it the best choice?]  
 
----
+--- B makes sense because  farmers produce vast amount of produce and it will be convinient for them to batch list all items at once, and also integrations to Uniswap will be a good choice since we want a decentralized platorm that can process transactions without intermediaries
 
 ### Question 2: Cost Optimisation (Practical Aptitude)
 
@@ -53,17 +53,17 @@ A farmer wants to list 50 bags of maize. Gas costs are:
 - **C)** They cost exactly the same  
 - **D)** ERC-1155 is cheaper by approximately $54  
 
-**Your Answer:** [A/B/C/D]  
+**Your Answer:**  B
 
 **Your Calculation/Reasoning:**  
-- ERC-721 cost = [Show calculation]
-- ERC-1155 cost = [Show calculation]
-- Difference = [Show calculation]
+- ERC-721 cost = 50b*100 000 g *20 = 10 000 0000/3000= $3 333.33
+- ERC-1155 cost = 150000g*20 + 5000*20*49= 7 900 000/3000 = $2 633.33
+- Difference = 3 333.33 - 2633.33 = $700
 
 
 [Explain why gas optimisation matters for African users]  
 
----
+--- Gas optimisation is important for African users because most people who live in africa are poor so optimising gas cost for them will work in their favour so that they can be able to afford your product.
 
 ### Question 3: Value Proposition Explanation (Communication & Thinking)
 
@@ -76,12 +76,12 @@ A farmer asks: *"Why can't we just use a normal website with a database?"*
 - **C)** "Because smart contracts are more secure than databases and Web3 is decentralised."  
 - **D)** "Blockchain uses cryptography which makes it unhackable, unlike normal databases."  
 
-**Your Answer:** [A/B/C/D]  
+**Your Answer:**   B
 
 **Your Explanation:**  
 [2–3 sentences explaining what makes this answer correct. What did you learn about why blockchain matters in Africa?]  
 
----
+---B is correct because blockchain is a decentralized platorm whereby anyone can participate on and it is trasparent all the information or transactions that took place are available for anyone to view, and at the same time it can't be manipulated. Blockchain matters in africa because it hard to manipulate providing africa with something that can be a single source of truth as there is large corruption in africa.
 
 ## PART 2: DeFi & NFT Integration (Advanced Concepts)
 
@@ -103,9 +103,9 @@ A farmer asks: *"Why can't we just use a normal website with a database?"*
 - **C)** The liquidity provider experiences impermanent loss because the pool maintains a constant product rather than constant ratio. ERC-721 would be more suitable than ERC-1155 for the NFT marketplace since individual NFTs require unique transactions.  
 - **D)** The constant product formula prevents any impermanent loss by automatically rebalancing. DAOs cannot implement financial protections due to smart contract immutability. ERC-1155 tokens are incompatible with standard DEX protocols.  
 
-**Your Answer:** [A/B/C/D]  
+**Your Answer:**   D
 
-**Your Reasoning:**  
+**Your Reasoning:**  The AMM pool maintains the constant ratio or value k from x * y = k so there won't be any loss incured
 
 - **AMM Mathematics:** How do you calculate the swap output? What happens to the liquidity provider's value?  
 - **DeFi Governance:** What is impermanent loss and how does protection work?  
@@ -114,6 +114,10 @@ A farmer asks: *"Why can't we just use a normal website with a database?"*
 [2–3 sentences synthesising these concepts into a coherent explanation]  
 
 ---
+--- By using formular x * y = k you can get a swap output.
+--- It is a loss incured in a pool, it is impermanent because the pool maintains a constant ratio, which means it not a permanent loss.
+--- It is prefered because ERC-1155 covers both fugible and non fugible tokens making it more flexible to use.
+
 
 ## SUBMISSION CHECKLIST
 
