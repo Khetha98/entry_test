@@ -7,19 +7,22 @@ pragma solidity ^0.8.18;
  * @notice PART 1 - Skills Marketplace (MANDATORY)
  */
 contract SkillsMarketplace {
-    
     // TODO: Define your state variables here
     // Consider:
     // - How will you track workers and their skills?
     // - How will you store gig information?
     // - How will you manage payments?
-    
+
+    string [][] workerSkills;
+    bytes32[] gigs;
+    bytes32[] payments;
+
     address public owner;
-    
+
     constructor() {
         owner = msg.sender;
     }
-    
+
     // TODO: Implement registerWorker function
     // Requirements:
     // - Workers should be able to register with their skill
@@ -27,19 +30,38 @@ contract SkillsMarketplace {
     // - Emit an event when a worker registers
     function registerWorker(string memory skill) public {
         // Your implementation here
+        //event registeredWorker(string workerAddress);
+        for(uint i = 0; i<workerSkills.length; i++){
+            if(registerWorker[owner][i] == skill){
+                return;
+            }
+        }
+        workerSkills[owner] = skill;
+        //registeredWorker(workerAddress);
+
+        
+        
     }
-    
+
     // TODO: Implement postGig function
     // Requirements:
     // - Employers post gigs with bounty (msg.value)
     // - Store gig description and required skill
     // - Ensure ETH is sent with the transaction
     // - Emit an event when gig is posted
-    function postGig(string memory description, string memory skillRequired) public payable {
+    function postGig(
+        string memory description,
+        string memory skillRequired
+    ) public payable {
         // Your implementation here
+        gigs.push(description);
+        workerSkills.push(skillRequired);
+
         // Think: How do you safely hold the ETH until work is approved?
+
+
     }
-    
+
     // TODO: Implement applyForGig function
     // Requirements:
     // - Workers can apply for gigs
@@ -48,8 +70,13 @@ contract SkillsMarketplace {
     // - Emit an event
     function applyForGig(uint256 gigId) public {
         // Your implementation here
+        mapping(address => uint) memory application;
+        application[owner] = gigId;
+        //for(int i = 0; i<workerSkills.length;i++){
+            //workerSkills[owner][gigId] ;
+        //}
     }
-    
+
     // TODO: Implement submitWork function
     // Requirements:
     // - Workers submit completed work (with proof/URL)
@@ -58,8 +85,9 @@ contract SkillsMarketplace {
     // - Emit an event
     function submitWork(uint256 gigId, string memory submissionUrl) public {
         // Your implementation here
+        
     }
-    
+
     // TODO: Implement approveAndPay function
     // Requirements:
     // - Only employer who posted gig can approve
@@ -71,11 +99,11 @@ contract SkillsMarketplace {
         // Your implementation here
         // Security: Use checks-effects-interactions pattern!
     }
-    
+
     // BONUS: Implement dispute resolution
     // What happens if employer doesn't approve but work is done?
     // Consider implementing a timeout mechanism
-    
+
     // Helper functions you might need:
     // - Function to get gig details
     // - Function to check worker registration
